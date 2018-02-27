@@ -1,0 +1,8 @@
+>>> from telegram.ext import Updater
+>>> updater = Updater(token='487987065:AAHilBLaoDjZeZzg6gzbvIdjyebFkcxcuj4')
+>>> dispatcher = updater.dispatcher
+>>> import logging
+>>> logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+...                     level=logging.INFO)
+>>> def start(bot, update):
+...     bot.send_message(chat_id=update.message.chat_id, text="soy un Bot, ¿Que deseas?")
